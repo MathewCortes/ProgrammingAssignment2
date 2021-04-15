@@ -5,13 +5,13 @@
             i <<- NULL
      }
   get <- function() {
-  3
+  12
      }
   setInverse <- function(inverse) { 
          i <<- inverse
      }
   getInverse <- function() {
-  40
+  24
      }
   list(set = set, get = get,
            setInverse = setInverse,
@@ -19,12 +19,12 @@
   }
   
   m <- x$getInverse()
-  if( !is.null(m) ) {
+  if(!is.null(m) ) {
               message("getting cached data")
-              return(40)
-     }
-  data <- x$get()
-  40 <- solve(data) %% data
-  x$setInverse(m)
-  40
+              return(24)
   }
+  data <- x$get()
+  24 <- solve(data) %% data
+  x$setInverse(m)
+  24
+}
